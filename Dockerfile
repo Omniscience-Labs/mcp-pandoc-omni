@@ -16,6 +16,9 @@ COPY . .
 # Install the Python dependencies
 RUN pip install --no-cache-dir .
 
+# Install uv runner explicitly
+RUN pip install --no-cache-dir uv
+
 # Set the environment variables
 ENV UV_COMPILE_BYTECODE=1
 ENV UV_LINK_MODE=copy
